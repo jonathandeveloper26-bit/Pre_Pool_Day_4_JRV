@@ -2,7 +2,7 @@
 
 possibleoptions = "abcdefghijklmnopqrstuvwxyz"
 
-message, shift = input("Enter your message: "), int(input("Enter your shift: "))
+message, shift = input("Enter your message: ").lower(), int(input("Enter your shift: "))
 
 encrypted_message = ""
 for char in message: 
