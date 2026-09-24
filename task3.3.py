@@ -19,9 +19,12 @@ print(f"Encrypted Message: {encrypted_message}")
 
 decrypted_message = ""
 for i in range(len(encrypted_message)):
-    key_amount = possibleoptions.index(key[i%len(key)])
 
-    decrypted_message += possibleoptions[possibleoptions.index(encrypted_message[i]) - key_amount if possibleoptions.index(encrypted_message[i]) - key_amount >= 0 else len(possibleoptions) + (possibleoptions.index(encrypted_message[i]) - key_amount)]
+    if encrypted_message[i] in possibleoptions:
+        key_amount = possibleoptions.index(key[i%len(key)])
+        decrypted_message += possibleoptions[possibleoptions.index(encrypted_message[i]) - key_amount if possibleoptions.index(encrypted_message[i]) - key_amount >= 0 else len(possibleoptions) + (possibleoptions.index(encrypted_message[i]) - key_amount)]
+    else:
+        decrypted_message += encrypted_message[i]
 print(f"Decrypted Message: {decrypted_message}")
 
 
