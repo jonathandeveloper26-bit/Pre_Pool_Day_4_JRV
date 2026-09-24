@@ -13,9 +13,9 @@ print(output_string)
 
 ### Task 2.3
 # Print all integers, in decreasing order from 10 000 to 1, that are divisible by 7
-for i in range(10001,1,-1):
-    if i % 7 == 0:
-        print(i)
+# for i in range(10001,1,-1):
+#     if i % 7 == 0:
+#         print(i)
 
 ### Task 2.4
 # For all integers from-30 to 30:

@@ -44,7 +44,6 @@ for em_freq in frequencies:
             continue
     ceaser_cipher_shifts.append(4 - possibleletters.index(key_letter)%26)  # 4 because the letter 'e' is the most common
 
-
 # Decrypt into Un-encrypted Lists
 stored_lists_decrypted = [[]]
 
@@ -69,3 +68,4 @@ for i in range(len(stored_lists_decrypted[0])):
             continue
 
 print(decrypted_message)
+print(ceaser_cipher_shifts)
