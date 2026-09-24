@@ -9,7 +9,10 @@ encrypted_message = ""
 for i in range(len(message)):
     key_amount = possibleoptions.index(key[i%len(key)])
     #print(f"key Letter: {key[i%len(key)]}\nkey Amount: {key_amount}")
-    encrypted_message += possibleoptions[(possibleoptions.index(message[i]) + key_amount) % len(possibleoptions)]
+    if message[i] in possibleoptions:
+        encrypted_message += possibleoptions[(possibleoptions.index(message[i]) + key_amount) % len(possibleoptions)]
+    else:
+        encrypted_message += message[i]
 
 print(f"Original Message: {message}")
 print(f"Encrypted Message: {encrypted_message}")
