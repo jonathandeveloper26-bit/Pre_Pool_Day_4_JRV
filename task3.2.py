@@ -8,3 +8,15 @@ for char in message:
 
 print(f"Original Message: {message.decode("utf-8")}")
 print(f"Encrypted Message: {encrypted_message}")
+
+### Decryption: Assume Key Given (utilizing the above code/responses)
+
+encrypted_message = encrypted_message.encode('utf-8')
+decrypted_message = ""
+for char in encrypted_message: 
+    decrypted_message += chr(char - shift)
+
+print(f"Decrypted Message: {decrypted_message}")
+
+
+
